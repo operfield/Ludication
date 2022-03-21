@@ -1,0 +1,243 @@
+.center{
+    text-align:center;
+    
+}
+
+
+  body {
+    background-color: aliceblue;
+    font-family: sans-serif;
+    color:rgb(50, 50, 50);
+  }
+
+
+
+.tableau {
+    height: 50%;
+width: 50%; 
+margin: auto auto;
+
+    }
+
+td:hover {
+    filter: brightness(0.7);
+
+    
+}
+
+.hovernon:hover{
+  filter: brightness(1);
+}
+
+/* Tooltip text */
+td .tooltiptext {
+    visibility: hidden;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 200px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+td:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+
+.vide{
+    opacity: 0;
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.métal.alcalin{
+    background-color: rgb(185, 14, 14);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.métal.alcalino-terreux{
+    background-color: rgb(252, 214, 144);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.lanthanide{
+    background-color: rgb(211, 165, 241);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.actinide{
+    background-color: rgb(228, 137, 187);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+.métal.de.transition{
+    background-color: rgb(245, 153, 147);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.métal.pauvre{
+    background-color: rgb(139, 139, 139);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.métalloïde{
+    background-color: rgb(100, 112, 70);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.non-métal{
+    background-color: rgb(97, 194, 102);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.halogène{
+    background-color: rgb(235, 229, 146);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.gaz.noble{
+    background-color: rgb(165, 228, 236);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.non.classé{
+    background-color: rgb(211, 211, 211);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+.superactinide{
+    background-color: rgb(255, 205, 202);
+    border-radius: 20%;
+    width: 10%;
+    height: 10%;
+}
+
+
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      
+      .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+    #etendue{
+      display: none;
+    }
+
+.tweet{
+background-color: rgb(29, 161, 242);
+color:white;
+width: 210px;
+	height: 70px;
+	border-radius: 3px;
+  font: 700 24px sans-serif;
+}
+
+.bouton{
+  background-color: rgb(88, 88, 88);
+color:white;
+width: 210px;
+	height: 70px;
+	border-radius: 3px;
+  font: 700 24px sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 1px 10px;
+  text-align:center ;
+}

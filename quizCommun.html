@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <head><title>Quiz Ludication</title>
+    <script src="tab.js"></script>
+</head>
+
+
+<body class="quiz">
+<h1 class="center">Quiz Ludication</h1>
+
+<script>
+    let listeQuestion=atomeQuestionnaireCommun();
+    let q2=Math.floor(Math.random() *7)+1;
+    let q1=Math.floor(Math.random() *18)+1;
+    let q3=famille();
+    let question1;
+    let question2;
+    let question3;
+    let question4;
+    let question5;
+    let question6;
+    let question7;
+    let question8;
+	let question9;
+    let question101;
+    let question102;
+    let question103;
+    let question104;
+  
+    let score=0;
+
+    function start(){
+        
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">1. Vrai ou faux,cet atome a pour groupe: "+q1+" ? </p><p> Nom: "+listeQuestion[0][0]+"</p><input type = \"radio\" id = \"choix1\" value=\"vrai\">vrai<br><input type = \"radio\" id = \"choix2\" value = \"faux\">faux<br></form><br><br><button  class=\"bouton\" onclick = \"submit1()\">valider</button>";
+    }
+
+    function submit1(){
+        if (document.getElementById('choix1').checked) {
+            question1 = document.getElementById('choix1').value;
+}
+if (document.getElementById('choix2').checked) {
+            question1 = document.getElementById('choix2').value;
+}
+
+    if(q1==listeQuestion[0][2]){    
+	if (question1 == "vrai") {
+		score++;
+}}else{
+    if (question1 == "faux") {
+		score++;
+}    
+}
+
+    document.getElementById("quiz").innerHTML="<form><p class = \"question\">2. Vrai ou faux cet atome a pour période: "+q2+" ?</p><p> Nom: "+listeQuestion[1][0]+"</p><input type = \"radio\" id = \"choix3\" value = \"vrai\">vrai<br><input type = \"radio\" id = \"choix4\" value = \"faux\">faux<br></form><br><br><button  class=\"bouton\" onclick = \"submit2()\">valider</button>";
+    }
+
+    function submit2(){
+        if (document.getElementById('choix3').checked) {
+            question2 = document.getElementById('choix3').value;
+}
+if (document.getElementById('choix4').checked) {
+            question2 = document.getElementById('choix4').value;
+}
+        if(q2==listeQuestion[1][1]){   
+	if (question2 == "vrai") {
+		score++;
+}}else{
+    if (question2 == "faux") {
+		score++;
+}    
+}
+
+
+
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">3. Vrai ou faux, la famille de cet atome est: "+q3+" ? </p><p> Nom: "+listeQuestion[2][0]+"</p><input type = \"radio\" id = \"choix5\" value = \"vrai\">vrai<br><input type = \"radio\" id = \"choix6\" value = \"faux\">faux<br></form><br><br><button  class=\"bouton\" onclick = \"submit3()\">valider</button>";
+    }
+
+    function submit3(){
+        if (document.getElementById('choix5').checked) {
+            question3 = document.getElementById('choix5').value;
+}
+if (document.getElementById('choix6').checked) {
+            question3 = document.getElementById('choix6').value;
+}
+
+
+        if(q3==listeQuestion[2][3]){    
+	if (question3 == "vrai") {
+		score++;
+}}else{
+    if (question3 == "faux") {
+		score++;
+}    
+}
+
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">4. quel est le nom de cet atome ?</p><p> Symbole: "+listeQuestion[3][6]+"</p><input type = \"text\" id = \"question4\"></form><br><br><button  class=\"bouton\" onclick = \"submit4()\">valider</button>";
+    }
+
+    function submit4(){
+        question4 = document.getElementById('question4').value;
+        if (question4.toUpperCase() == listeQuestion[3][0].toUpperCase()) {
+		score++;
+}
+        
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">5. quel est le nom de cet atome ?</p><p> Numéro atomique: "+tableauPeriodique.indexOf(listeQuestion[4])+"</p><input  type = \"text\" id = \"question5\"></form><br><br><button  class=\"bouton\" onclick = \"submit5()\">valider</button>";
+    }
+
+    function submit5(){
+        question5 = document.getElementById('question5').value;
+
+        if (question5.toUpperCase() == listeQuestion[4][0].toUpperCase()) {
+		score++;
+}
+
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">6. Quel est le symbole de cet atome ?</p><p> Nom: "+listeQuestion[5][0]+"</p><input type = \"text\" id = \"question6\"></form><br><br><button  class=\"bouton\" onclick = \"submit6()\">valider</button>";
+    }
+
+    function submit6(){
+        question6 = document.getElementById('question6').value;
+
+        if (question6 == listeQuestion[5][6]) {
+		score++;
+}
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">7. Quel est le symbole de cet atome.</p><p> Numéro atomique: "+tableauPeriodique.indexOf(listeQuestion[6])+"</p><input type = \"text\" id = \"question7\"></form><br><br><button  class=\"bouton\" onclick = \"submit7()\">valider</button>";
+    }
+
+    function submit7(){
+        question7 = document.getElementById('question7').value;
+        if (question7 == listeQuestion[6][6]) {
+		score++;
+}
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">8. quel est le numéro atomique de cet atome.</p><p> Nom: "+listeQuestion[7][0]+"</p><input type = \"text\" id = \"question8\"></form><br><br><button  class=\"bouton\" onclick = \"submit8()\">valider</button>";
+    }
+
+    function submit8(){
+        question8 = document.getElementById('question8').value;
+
+        if (question8 == tableauPeriodique.indexOf(listeQuestion[7])) {
+		score++;
+}
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">9. quel est le numéro atomique de cet atome.</p><p> Symbole: "+listeQuestion[8][6]+"</p><input  type = \"text\" id = \"question9\"></form><br><br><button  class=\"bouton\" onclick = \"submit9()\">valider</button>";
+    }
+
+    function submit9(){
+        question9 = document.getElementById('question9').value;
+        if (question9 == tableauPeriodique.indexOf(listeQuestion[8])) {
+		score++;
+}
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">10. Donnez un maximum d'information sur cet atome:</p><p> Numéro atomique: "+tableauPeriodique.indexOf(listeQuestion[9])+"</p>Nom: <br><input  type = \"text\" id = \"question101\"><br>Symbole: <br><input  type = \"text\" id = \"question102\"><br>Groupe: <br><input  type = \"text\" id = \"question103\"><br>Période:<br><input  type = \"text\" id = \"question104\"><br><br></form><button  class=\"bouton\" onclick = \"reponse()\">résultats</button>";  
+    }
+
+
+    function reponse(){
+
+    question101 = document.getElementById('question101').value;
+    question102 = document.getElementById('question102').value;
+    question103 = document.getElementById('question103').value;
+    question104 = document.getElementById('question104').value;
+
+
+
+if (question101.toUpperCase() == listeQuestion[9][0].toUpperCase()) {
+    if (question102 == listeQuestion[9][6]) {
+		if (question103.toUpperCase() == listeQuestion[9][2].toUpperCase()) {
+            if (question104.toUpperCase() == listeQuestion[9][1].toUpperCase()) {
+               
+		score++;
+
+}
+}
+}
+}
+
+
+
+
+
+
+
+
+let tweet=twitterTweet(score)
+
+document.getElementById("quiz").innerHTML="<p>Votre score: "+score+"</p><br><br>"+tweet+"<br><a href \"Ludication.fr/quiz/commun\"><button class=\"bouton\">recommencer</button>";
+
+}
+</script>
+
+
+<div class="center" style="margin: 0 auto; font-size: 40px;" id="quiz"><p>Le quiz est composer de 10 question<br>1 question = 1 point</p>
+    <br>
+    <button class="bouton" onclick = "start()">commencer</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <head><title>Quiz Ludication</title>
+    <script src="tab.js"></script>
+</head>
+
+
+<body>
+<h1 class="center">Quiz Ludication</h1>
+
+<script>
+    let atome= tableauPeriodique[atomeCommunRandom()] 
+    let question1;
+    let question2;
+    let question3;
+    let question4;
+
+  
+    let score=0;
+
+    function start(){
+        
+        document.getElementById("quiz").innerHTML="<form><p class = \"question\">Donnez un maximum d'information sur cet atome:</p><p> Numéro atomique: "+tableauPeriodique.indexOf(atome)+"</p>Nom: <br><input  type = \"text\" id = \"question1\"><br>Symbole: <br><input  type = \"text\" id = \"question2\"><br>Groupe: <br><input  type = \"text\" id = \"question3\"><br>Période:<br><input  type = \"text\" id = \"question4\"><br><br></form><button  class=\"bouton\" onclick = \"reponse()\">résultats</button>";  
+    }
+
+
+
+    function reponse(){
+
+    question1 = document.getElementById('question1').value;
+    question2 = document.getElementById('question2').value;
+    question3 = document.getElementById('question3').value;
+    question4 = document.getElementById('question4').value;
+
+
+
+if (question1 == atome[0]) {
+    score+= 2;
+}
+
+    if (question2 == atome[6]) {
+        score+= 2;
+    }
+
+
+		if (question3 == atome[2]) {
+            score+= 3;
+        }
+
+            if (question4 == atome[1]) {
+                score+= 3;
+            }
+
+let tweet=twitterTweet(score)
+
+document.getElementById("quiz").innerHTML="<p>Votre score: "+score+"</p><br><br>"+tweet+"<br><a href \"Ludication.fr/quiz/commun\"><button class=\"bouton\">recommencer</button>";
+
+}
+</script>           
+		
+
+
+<div class="center" style="margin: 0 auto; font-size: 40px;" id="quiz"><p>Donner un maximum d'info sur un atome aléatoire</p>
+    <br>
+    <button class="bouton" onclick = "start()">commencer</button>
+</div>
+</body>
+</html>

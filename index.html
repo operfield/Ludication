@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <head><title>LudiCation</title>
+    <script src="tab.js"></script>
+</head>
+<body>
+    <div class="center">
+<h1>Tableau Périodique intéractif</h1>
+
+<p>Bienvenue sur Ludication !</p>
+
+<br>
+
+<div>
+  <table style="margin: 0 auto;">
+    <td class="hovernon">Tableau Périodique étendu</td><td class="hovernon">
+  <label class="switch">
+    <input type="checkbox" onclick="affichageEtendu()">
+    <span class="slider round"></span>
+    <span class="tooltiptext">ajoute des éléments hypothétiques</span>
+  </label>
+</td>
+<td colspan="3" class="hovernon"> </td>
+<td class="hovernon">mode sombre</td><td class="hovernon">
+  <label class="switch">
+    <input type="checkbox" onclick="darkMode()">
+    <span class="slider round"></span>
+    <span class="tooltiptext">change le fond en noir</span>
+  </label>
+</td>
+<td><a  href="menu.html"><button class="bouton">accéder au quiz</button></a></td>
+</table>
+</div>
+<div id="tableau"></div>
+<div id="tableau">
+    <script>
+        afficherTableau();
+        </script>
+   
+        <script>
+            function affichageEtendu() {
+  var x = document.getElementById("etendue");
+  if (x.style.display === 'table') {
+    x.style.display= 'none';
+  } else {
+    x.style.display= 'table';
+  }
+}
+
+function darkMode() {
+  var x = document.body;
+  if (x.style.backgroundColor === 'rgb(30, 30, 30)') {
+    x.style.backgroundColor= 'aliceblue';
+    x.style.transition= 'background-color 1s ease-out';
+    x.style.color='rgb(50, 50, 50)';
+    x.style.filter='brightness(1)';
+  } else {
+    x.style.backgroundColor= 'rgb(30, 30, 30)';
+    x.style.color='white';
+    x.style.filter='brightness(0.8)';
+    x.style.transition= 'background-color 1s ease-out';
+  }
+}
+        </script>
+       
+       
+     
+</body>
