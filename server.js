@@ -14,6 +14,14 @@ app.get('/',function(req,res){
     res.sendFile(__dirname + "/" + "style.css");
   });
 
+app.get('/logo.png', function(req, res) {
+    res.sendFile(__dirname + "/" + "logo.png");
+  });
+
+app.get('/logo.ico', function(req, res) {
+    res.sendFile(__dirname + "/" + "logo.ico");
+  });
+
   app.get('/tab.js', function(req, res) {
     res.sendFile(__dirname + "/" + "tab.js");
   });
