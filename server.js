@@ -18,23 +18,23 @@ app.get('/',function(req,res){
     res.sendFile(__dirname + "/" + "tab.js");
   });
 
-  app.get('/menu.html', function(req, res) {
+  app.get('/menu', function(req, res) {
     res.sendFile(__dirname + "/" + "menu.html");
   });
 
-  app.get('/QRA.html', function(req, res) {
+  app.get('/QuizRapideAvance', function(req, res) {
     res.sendFile(__dirname + "/" + "QRA.html");
   });
 
-  app.get('/QRC.html', function(req, res) {
+  app.get('/QuizRapideCommun', function(req, res) {
     res.sendFile(__dirname + "/" + "QRA.html");
   });
 
-  app.get('/quizCommun.html', function(req, res) {
+  app.get('/QuizCommun', function(req, res) {
     res.sendFile(__dirname + "/" + "quizCommun.html");
   });
 
-  app.get('/quizNormal.html', function(req, res) {
+  app.get('/quizNormal', function(req, res) {
     res.sendFile(__dirname + "/" + "quizNormal.html");
   });
 
