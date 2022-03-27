@@ -264,7 +264,7 @@ function famille(){
 }
 
 function twitterTweet(score){
-  return "<a href=\"https://twitter.com/intent/tweet?text=J%27ai%20eu%20"+score+"%2F10%%20au%20quiz%20de%20Ludication%20%21%20Pouvez-vous%20faire%20mieux%20%3F%20https%3A//www.ludication.live/\"><button class=\"tweet\">partager votre score</button></a>"
+  return "<a href=\"https://twitter.com/intent/tweet?text=J%27ai%20eu%20"+score+"%2F10%%20au%20quiz%20de%20Ludication%20%21%20Pouvez-vous%20faire%20mieux%20%3F%20https%3A%2F%2Fwww.ludication.live%2F\"><button class=\"tweet\">partager votre score</button></a>"
 }
 
 
