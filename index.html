@@ -20,7 +20,7 @@
 <div>
   <table style="margin: 0 auto;">
     <td class="hovernon">Tableau Périodique étendu</td><td class="hovernon">
-  <label class="switch">
+  <label class="switch"><! -- bouton pour afficher le tableau étendu -->
     <input type="checkbox" onclick="affichageEtendu()">
     <span class="slider round"></span>
     <span class="tooltiptext">ajoute des éléments hypothétiques</span>
@@ -28,23 +28,23 @@
 </td>
 <td colspan="3" class="hovernon"> </td>
 <td class="hovernon">mode sombre</td><td class="hovernon">
-  <label class="switch">
+  <label class="switch"><! -- bouton mode sombre -->
     <input type="checkbox" onclick="darkMode()">
     <span class="slider round"></span>
     <span class="tooltiptext">change le fond en noir</span>
   </label>
 </td>
-<td><a  href="menu"><button class="bouton">accéder au quiz</button></a></td>
+<td><a  href="menu"><button class="bouton">accéder au quiz</button></a></td><! -- redirection au quiz -->
 </table>
 </div>
-<div id="tableau"></div>
+<div id="tableau"></div><! -- partie où le tableau va être afficher -->
 <div id="tableau">
     <script>
         afficherTableau();
         </script>
    
         <script>
-            function affichageEtendu() {
+            function affichageEtendu() {/*affiche/cache la class étendue (les atome hypothétique)*/
   var x = document.getElementById("etendue");
   if (x.style.display === 'table') {
     x.style.display= 'none';
@@ -53,7 +53,7 @@
   }
 }
 
-function darkMode() {
+function darkMode() {/*fonction modifiant l'arrière plan et la luminosité*/
   var x = document.body;
   if (x.style.backgroundColor === 'rgb(30, 30, 30)') {
     x.style.backgroundColor= 'aliceblue';
