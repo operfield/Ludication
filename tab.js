@@ -153,11 +153,14 @@ const tableauPeriodique =
 ["Unquadunium", "8", "-", "superactinide", "-", "8s2 8p2 7d2 6f2 5g15", "Uqu"] , 
 ["Unquadbium", "8", "-", "superactinide", "-", "8s2 8p2 7d2 6f2 5g16", "Uqb"] ]
 
+
+/*tableau contenant toute les famille (pour les quiz)*/
 const listeFamille= ["métal alcalin", "métal alcalino-terreux", "métal alcalin", "métal alcalino-terreux", "lanthanide", "actinide", "métal de transition", "métal pauvre", "métalloïde", "non-métal", "halogène", "gaz noble", "non classé"];
 
+/*liste des index d'atome commun pour les quiz simple*/
 const atomeCommun= [5, 15, 1, 2, 6, 7, 8, 9, 11, 13, 16, 17, 19, 20, 24, 26, 29, 30, 47, 53, 79,80,82,88, 10, 36, 54,86, 92, 94];
 
-
+/*fonction permettant d'afficher le tableau*/
 function afficherTableau(){
     /*RAPPEL
     pour un atome de numéro atomique i : 
@@ -251,23 +254,26 @@ function afficherTableau(){
 
 }
 
+/*fonction retournant un nombre retournant un chiffre de 1 à 119 (index d'atome)*/
 function atomeRandom(){
   return Math.floor(Math.random() *119);
 }
-
+/*fonction retournant un nombre retournant l'index d'un atome Commun*/
 function atomeCommunRandom(){
   return atomeCommun[Math.floor(Math.random() *31)];
 }
 
+/*retourne une une famille d'atome*/
 function famille(){
   return listeFamille[Math.floor(Math.random() *13)];
 }
 
+/*fonction utilisé pour le bouton partagé (génère un tweet avec le score de l'utilisateur)*/
 function twitterTweet(score){
   return "<a href=\"https://twitter.com/intent/tweet?text=J'ai%20eu%20"+score+"%20au%20quiz%20de%20Ludication%20!%20Pouvez-vous%20faire%20mieux%20%3F%20https%3A%2F%2Fwww.ludication.live%2F\"><button class=\"tweet\">partager votre score</button></a>"
 }
 
-
+/*créer une liste de 10 atome commun aléatoire pour les question*/
 function atomeQuestionnaireCommun(){
   let tab=[];
 for (let i = 0; i <= 9; i++) {
@@ -275,7 +281,7 @@ for (let i = 0; i <= 9; i++) {
 }
 return tab;
 }
-
+/*créer une liste de 10 atome aléatoire pour les question*/
 function atomeQuestionnaire(){
   let tab=[];
 for (let i = 0; i <= 9; i++) {
